@@ -1,0 +1,6 @@
+@(subcategory: SubCategory)
+
+<subcategory id="@subcategory.getId()">
+	<name>@subcategory.getName()</name>
+	<description>@subcategory.getDescription()</description>
+</subcategory>

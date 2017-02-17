@@ -1,0 +1,8 @@
+@(product: Product)
+
+<product id="@product.getId()">
+	<name>@product.getName()</name>
+	<amount>@product.getAmount()</amount>
+	<price>@product.getPrice()</price>
+	<owner>@product.getUser.getName()</owner>
+</product>

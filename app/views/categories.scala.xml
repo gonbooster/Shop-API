@@ -1,0 +1,6 @@
+@(categories: List[Category])
+<categories>
+@for(c <- categories){
+@category(c)
+}
+</categories>

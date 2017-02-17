@@ -1,0 +1,6 @@
+@(category: Category)
+
+<category id="@category.getId()">
+	<name>@category.getName()</name>
+	<description>@category.getDescription()</description>
+</category>

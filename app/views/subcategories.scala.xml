@@ -1,0 +1,6 @@
+@(subcategories: List[SubCategory])
+<subcategories>
+@for(s <- subcategories){
+@subcategory(s)
+}
+</subcategories>

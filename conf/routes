@@ -1,0 +1,53 @@
+############################# Routes #############################
+
+# index
+GET     /          controllers.HomeController.index
+
+############################# User Routes #############################
+
+#get users by id
+GET /user/:id      controllers.UserController.retrieveUser(id: Long)
+
+# create a user
+POST /user/register        controllers.UserController.createUser
+
+# create a user
+GET /user/login/:email/:password        controllers.UserController.loginUser(email: String, password: String)
+
+#get all User products
+GET /user/products/:id      controllers.UserController.retrieveProductsByUser(id: Long)
+
+############################# Product Routes #############################
+
+#get all products
+GET /products/:page/:count        controllers.ProductController.retrieveProducts(page: Int, count: Int)
+
+#get product by id
+GET /product/:id      controllers.ProductController.retrieveProduct(id: Long)
+
+# create a product
+POST /product/register/:userId         controllers.ProductController.createProduct(userId: Long)
+
+############################# Review Routes #############################
+
+#get reviews by id
+GET /review/:id							controllers.ReviewController.retrieveReview(id: Long)
+
+#create a review
+POST /review/register/:userId			controllers.ReviewController.createReview(userId: Long)
+
+############################# Category Routes #############################
+
+#get all categories
+GET /categories/:page/:count        controllers.CategoryController.retrieveCategories(page: Int, count: Int)
+
+#get all category subcategories
+GET /category/subcategories/:id      controllers.CategoryController.retrieveSubCategoriesByCategory(id: Long)
+
+#get all category subcategories
+GET /category/subcategory/products/:id      controllers.CategoryController.retrieveProductsBySubCategory(id: Long)
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

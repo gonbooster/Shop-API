@@ -1,0 +1,59 @@
+
+**************API REQUESTS***************
+
+### USUARIOS ###
+
+Obtener un usuario por su ID:
+GET
+http://mimo-shop.herokuapp.com/user/:id
+
+Crear un usuario:
+POST
+http://mimo-shop.herokuapp.com/user/register
+
+Hacer login con las credenciales de un usuario:
+GET
+http://mimo-shop.herokuapp.com/user/login/:email/:password
+
+Obtener todos los productos de un usuario:
+GET
+http://mimo-shop.herokuapp.com/user/products/:id
+
+
+### PRODUCTOS ###
+
+Obtener todos los productos:
+GET
+http://mimo-shop.herokuapp.com/products/:page/:count
+
+Obtener producto por su ID:
+GET
+http://mimo-shop.herokuapp.com/product/:id
+
+Crear un producto:
+POST
+http://mimo-shop.herokuapp.com/product/register/:userId
+
+Obtener las reviews de un producto:
+GET
+http://mimo-shop.herokuapp.com/user/review/:id
+
+Crear una review de un producto:
+POST
+http://mimo-shop.herokuapp.com/review/register/:userId
+
+
+### CATEGORÍAS ###
+
+Obtener todas las categorías:
+GET
+http://mimo-shop.herokuapp.com/categories/:page/:count
+
+Obtener todas las subcategorías de una categoría:
+GET
+http://mimo-shop.herokuapp.com/category/subcategories/:id
+
+Obtener todos los productos de una subcategoría:
+GET
+http://mimo-shop.herokuapp.com/category/subcategory/products/:id
+
